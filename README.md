@@ -1,38 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# random-uuid
 
-## Getting Started
+Micro-utilitário TypeScript para geração de identificadores.
 
-First, run the development server:
+## Leitura arquitetural
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Escopo pequeno e deliberado: resolver uma necessidade isolada sem acoplar infraestrutura desnecessária.
+- A estrutura do repositório foi lida como evidência principal; este README evita prometer features que não aparecem no código ou no contexto técnico consolidado do portfólio.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Stack identificada
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Framer Motion, JavaScript, Next.js, Node.js, React, TypeScript
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Decisões de engenharia
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Separação explícita entre interface, regras de domínio e persistência sempre que a estrutura do projeto permite.
+- Validação de entrada e contratos de API são tratados como fronteira de segurança, não como detalhe de UI.
+- Persistência e autenticação são documentadas como partes críticas do sistema quando aparecem no stack.
+- O projeto prioriza fundamentos verificáveis: modelagem de dados, fluxo operacional claro e manutenção pragmática.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Evidências observadas
 
-## Learn More
+- package.json declara o pacote `random-uuid`.
+- scripts disponíveis: `build`, `dev`, `lint`, `start`.
+- diretório `src/` concentra a implementação principal.
 
-To learn more about Next.js, take a look at the following resources:
+## Operação
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Antes de rodar em produção, revise variáveis de ambiente, migrações, credenciais, build e políticas de deploy. O repositório deve ser tratado como produto técnico auditável: dependências explícitas, scripts reproduzíveis e logs suficientes para investigar erro real.
